@@ -2,6 +2,8 @@ import os
 import socket
 import struct
 
+from datetime import datetime 
+
 class ShellyProxy:
   def __init__(self, hass_ip, hass_port, coap_ip, coap_port, debug=None):
     self.hass_ip = hass_ip
@@ -9,6 +11,10 @@ class ShellyProxy:
     self.coap_ip = coap_ip
     self.coap_port = coap_port
     self.debug = debug
+
+  def dprinter(self, msg):
+    now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    print(f'[{now}] {msg}')
 
   def run(self):
     # bind socket
@@ -25,7 +31,7 @@ class ShellyProxy:
         data, addr = sock.recvfrom(10240)
         # Debug
         if self.debug:
-          print(f'Got CoAP message from: {addr[0]}:{addr[1]}')
+          self.dprinter(f'Got CoAP message from: {addr[0]}:{addr[1]}')
         # Tag and add device ip-address to message
         newdata = bytearray(b'prxy')
         newdata.extend(socket.inet_aton(addr[0]))
