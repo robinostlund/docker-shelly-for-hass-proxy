@@ -17,7 +17,7 @@ If you are running shelly devices on different vlan or running home assistant in
 | PROXY_PORT | Shelly proxy port | 5683 |
 
 ## Start ShellyForHassProxy container:
-!! Important to use --net host
+:warning: Important to use --net host
 
 ```sh
 $ docker run -dt \
