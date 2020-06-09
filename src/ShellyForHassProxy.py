@@ -25,8 +25,8 @@ def main():
   shelly_proxy(
     os.getenv('HOMEASSISTANT_IP'),
     int(os.getenv('HOMEASSISTANT_PORT')),
-    args.os.getenv('PROXY_UDP_IP'),
-    int(args.os.getenv('PROXY_UDP_PORT'))
+    os.getenv('PROXY_UDP_IP'),
+    int(os.getenv('PROXY_UDP_PORT'))
   )
 if __name__ == '__main__':
   main()
