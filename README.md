@@ -28,6 +28,7 @@ $ docker run -dt \
     -e HASS_PORT=5684\
     -e COAP_IP=224.0.1.187 \
     -e COAP_PORT=5683 \
+    -l com.centurylinklabs.watchtower.enable='true' \
     robostlund/shelly-for-hass-proxy:latest
 ```
 
