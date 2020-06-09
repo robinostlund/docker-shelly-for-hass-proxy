@@ -13,8 +13,8 @@ If you are running your Shelly devices on different VLAN or running Home Assista
 | :--- | :--- | :---  |
 | HASS_IP | IP of your home assistant to forward packages to | 127.0.0.1 |
 | HASS_PORT | Port for shelly in your home assistant | 5683|
-| PROXY_IP | Shelly multicast address | 224.0.1.187 |
-| PROXY_PORT | Shelly proxy port | 5683 |
+| PROXY_IP | Shelly CoAP multicast address | 224.0.1.187 |
+| PROXY_PORT | Shelly CoAP multicast port | 5683 |
 
 ## Start ShellyForHassProxy container:
 **Important to use --net host**
