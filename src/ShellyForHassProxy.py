@@ -12,6 +12,9 @@ def shelly_proxy(hass_ip, hass_port, udp_ip, udp_port):
     try:
       # Receive CoAP message
       data, addr = sock.recvfrom(10240)
+      # Debug
+      print(data)
+      print(addr)
       # Tag and add device ip-address to message
       newdata = bytearray(b'prxy')
       newdata.extend(socket.inet_aton(addr[0]))
