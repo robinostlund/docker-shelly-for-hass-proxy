@@ -9,7 +9,7 @@ Big thanks to [StyraHem.se](https://www.styrahem.se/c/126/shelly) for an awesome
 
 ----------
 # Environment Variables
-| Variable | Description | Example |
+| Variable | Description | Default |
 | :--- | :--- | :---  |
 | HOMEASSISTANT_IP | IP of your home assistant to forward packages to | 127.0.0.1 |
 | HOMEASSISTANT_PORT | Port for shelly in your home assistant | 5684|
