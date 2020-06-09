@@ -11,10 +11,10 @@ Big thanks to [StyraHem.se](https://www.styrahem.se/c/126/shelly) for an awesome
 # Environment Variables
 | Variable | Description | Default |
 | :--- | :--- | :---  |
-| HOMEASSISTANT_IP | IP of your home assistant to forward packages to | 127.0.0.1 |
-| HOMEASSISTANT_PORT | Port for shelly in your home assistant | 5684|
-| PROXY_UDP_IP | Shelly multicast address | 224.0.1.187 |
-| PROXY_UDP_PORT | Shelly proxy port | 5683 |
+| HASS_IP | IP of your home assistant to forward packages to | 127.0.0.1 |
+| HASS_PORT | Port for shelly in your home assistant | 5684|
+| PROXY_IP | Shelly multicast address | 224.0.1.187 |
+| PROXY_PORT | Shelly proxy port | 5683 |
 
 
 ----------
@@ -24,9 +24,9 @@ $ docker run -dt \
     --name shellyforhassproxy \
     --hostname proxy \
     --net host \
-    -e HOMEASSISTANT_IP=127.0.0.1 \
-    -e HOMEASSISTANT_PORT=5684\
-    -e PROXY_UDP_IP=224.0.1.187 \
-    -e PROXY_UDP_PORT=5683 \
+    -e HASS_IP=127.0.0.1 \
+    -e HASS_PORT=5684\
+    -e PROXY_IP=224.0.1.187 \
+    -e PROXY_PORT=5683 \
     robostlund/shelly-for-hass-proxy:latest
 ```
