@@ -1,9 +1,11 @@
 # Information
-This is a docker container running shelly for hass proxy (https://github.com/StyraHem/ShellyForHASS)
+This is a docker container running shelly for hass proxy [ShellyForHass](https://github.com/StyraHem/ShellyForHASS)
 
 If you are running shelly devices on different vlan or running home assistant in an emulated network environemnt on docker you can use this container to forward CoAP messages to ShellyForHASS Plugin.
 
 On your home assistant container you need to add a port like this: 5684:5683/udp
+
+Big thanks to [StyraHem.se](https://www.styrahem.se/c/126/shelly) for an awesome plugin
 
 ----------
 # Environment Variables
