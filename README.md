@@ -5,7 +5,7 @@ If you are running shelly devices on different vlan or running home assistant in
 
 On your home assistant container you need to add a port like this: 5684:5683/udp
 
-Big thanks to [StyraHem.se](https://www.styrahem.se/c/126/shelly) for an awesome plugin
+Big thanks to [StyraHem.se](https://www.styrahem.se/c/126/shelly) for an awesome component to Home Assistant
 
 ----------
 # Environment Variables
@@ -22,7 +22,7 @@ Big thanks to [StyraHem.se](https://www.styrahem.se/c/126/shelly) for an awesome
 ```sh
 $ docker run -dt \
     --name shellyforhassproxy \
-    --hostname proxy \
+    --hostname shelly_proxy \
     --net host \
     -e HASS_IP=127.0.0.1 \
     -e HASS_PORT=5684\
