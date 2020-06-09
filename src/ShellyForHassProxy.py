@@ -33,7 +33,7 @@ class ShellyProxy:
         # Receive CoAP message
         data, addr = sock.recvfrom(10240)
         # Debug
-        if self.debug:
+        if self.debug and self.debug == 'yes':
           self.pprinter(f'Got CoAP message from: {addr[0]}:{addr[1]}')
         # Tag and add device ip-address to message
         newdata = bytearray(b'prxy')
