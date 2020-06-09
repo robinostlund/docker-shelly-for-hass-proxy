@@ -1,4 +1,4 @@
-import argparse
+import os
 import socket
 import struct
 
@@ -22,19 +22,11 @@ def shelly_proxy(hass_ip, hass_port, udp_ip, udp_port):
       print ('exception ' + str(e))
 
 def main():
-  parser = argparse.ArgumentParser(description='ShellyForHass Proxy.')
-  parser.add_argument('--hass-ip', dest="hass_ip", type=str, help='Home Assistant IP', required=True)
-  parser.add_argument('--hass-port', dest='hass_port', type=str, action='store', help="Home Assistant Port", required=True)
-  parser.add_argument('--proxy-ip', dest="udp_ip", type=str, help='Proxy IP', required=True)
-  parser.add_argument('--proxy-port', dest='udp_port', type=str, action='store', help="Proxy Port", required=True)
-  args = parser.parse_args()
-
   shelly_proxy(
-    args.hass_ip,
-    int(args.hass_port),
-    args.udp_ip,
-    int(args.udp_port)
+    os.getenv('HOMEASSISTANT_IP'),
+    int(os.getenv('HOMEASSISTANT_PORT')),
+    args.os.getenv('PROXY_UDP_IP'),
+    int(args.os.getenv('PROXY_UDP_PORT'))
   )
-
 if __name__ == '__main__':
   main()
