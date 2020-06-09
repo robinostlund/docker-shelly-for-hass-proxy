@@ -1,5 +1,5 @@
 # Shelly For Hass Proxy Container
-This is a docker container image running shelly for hass proxy for Home Assisant component [ShellyForHass](https://github.com/StyraHem/ShellyForHASS)
+This is a docker container image running ShellyForHASS proxy for Home Assisant component [ShellyForHass](https://github.com/StyraHem/ShellyForHASS)
 
 If you are running shelly devices on different vlan or running home assistant in an emulated network environemnt on docker you can use this container to forward CoAP messages to ShellyForHASS Plugin.
 
