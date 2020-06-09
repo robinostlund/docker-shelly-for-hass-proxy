@@ -17,7 +17,7 @@ If you are running your Shelly devices on different VLAN or running Home Assista
 | PROXY_PORT | Shelly proxy port | 5683 |
 
 ## Start ShellyForHassProxy container:
-:warning: **Important to use --net host**
+**Important to use --net host**
 
 ```sh
 $ docker run -dt \
