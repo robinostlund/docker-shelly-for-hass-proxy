@@ -38,16 +38,16 @@ def shelly_proxy(hass_ip, hass_port, udp_ip, udp_port):
 def main():
   parser = argparse.ArgumentParser(description='ShellyForHass Proxy.')
   parser.add_argument('--hass-ip', dest="hass_ip", type=str, help='Home Assistant IP', required=True)
-  parser.add_argument('--hass-port', dest='udp_port', type=int, action='store', help="Home Assistant Port", required=True)
+  parser.add_argument('--hass-port', dest='udp_port', type=str, action='store', help="Home Assistant Port", required=True)
   parser.add_argument('--proxy-ip', dest="udp_ip", type=str, help='Shelly For Hass Proxy IP', required=True)
-  parser.add_argument('--proxy-port', dest='udp_port', type=int, action='store', help="Shelly For Hass Proxy Port", required=True)
+  parser.add_argument('--proxy-port', dest='udp_port', type=str, action='store', help="Shelly For Hass Proxy Port", required=True)
   args = parser.parse_args()
 
   shelly_proxy(
     args.hass_ip,
-    args.hass_port,
+    int(args.hass_port),
     args.udp_ip,
-    args.udp_port
+    int(args.udp_port)
   )
 
 if __name__ == '__main__':
