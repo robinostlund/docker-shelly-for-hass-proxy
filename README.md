@@ -5,6 +5,7 @@ If you are running your Shelly devices on different VLAN or running Home Assista
 
 ## Thanks to
 - [StyraHem.se](https://www.styrahem.se/c/126/shelly) for an awesome component to Home Assistant
+- [Shelly.cloud](https://shelly.cloud) for awesome products
 
 ## Installation
 
