@@ -13,7 +13,10 @@ class ShellyProxy:
     self.coap_port = coap_port
     self.debug = debug
 
-    # if self.debug and self.debug == 'yes':
+    # configure logging
+    logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.INFO)
+    if self.debug and self.debug == 'yes':
+      logging.getLogger().setLevel(logging.DEBUG)
 
   def run(self):
     # bind socket
