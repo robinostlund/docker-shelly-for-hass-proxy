@@ -42,7 +42,7 @@ class ShellyProxy:
         # Send to Shelly plugin
         sock.sendto(newdata, (self.hass_ip, self.hass_port))
       except Exception as e:
-        print ('exception ' + str(e))
+        print('exception ' + str(e))
 
 
 def main():

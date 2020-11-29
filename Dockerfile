@@ -9,4 +9,4 @@ RUN chmod +x /opt/entrypoint.sh
 
 #ENTRYPOINT ["/opt/entrypoint.sh"]
 ENV PYTHONUNBUFFERED=0
-ENTRYPOINT ["python3", "/opt/proxy.py"]
+ENTRYPOINT ["python3", "-u", "/opt/proxy.py"]
