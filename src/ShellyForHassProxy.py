@@ -47,10 +47,10 @@ class ShellyProxy:
 
 def main():
   # fetch variables
-  HOMEASSISTANT_IP = os.getenv('HOMEASSISTANT_IP')
-  HOMEASSISTANT_PORT = int(os.getenv('HOMEASSISTANT_PORT'))
-  COAP_IP = os.getenv('COAP_UDP_IP')
-  COAP_UDP_PORT = int(os.getenv('COAP_UDP_PORT'))
+  HOMEASSISTANT_IP = os.getenv('HASS_IP')
+  HOMEASSISTANT_PORT = int(os.getenv('HASS_PORT'))
+  COAP_IP = os.getenv('COAP_IP')
+  COAP_UDP_PORT = int(os.getenv('COAP_PORT'))
   PROXY_DEBUG = os.getenv('PROXY_DEBUG', default=None)
 
   # start shelly proxy
