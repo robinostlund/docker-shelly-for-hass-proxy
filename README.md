@@ -16,6 +16,8 @@ If you are running your Shelly devices on different VLAN or running Home Assista
 | HASS_PORT | Port for shelly in your home assistant | 5684|
 | COAP_IP | Shelly CoAP multicast address | 224.0.1.187 |
 | COAP_PORT | Shelly CoAP multicast port | 5683 |
+| PROXY_DEBUG | Print debug logs | no |
+
 
 ## Start ShellyForHassProxy container:
 **Important to use --net host**
@@ -29,6 +31,7 @@ $ docker run -dt \
     -e HASS_PORT=5684\
     -e COAP_IP=224.0.1.187 \
     -e COAP_PORT=5683 \
+    -e PROXY_DEBUG=yes \
     -l com.centurylinklabs.watchtower.enable='true' \
     robostlund/shelly-for-hass-proxy:latest
 ```
