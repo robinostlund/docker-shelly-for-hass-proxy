@@ -21,7 +21,7 @@ class ShellyProxy:
   def run(self):
     # bind socket
     logging.info(f'Starting ShellyForHASS Proxy..')
-    logging.info(f'Listening on {self.coap_port} for messages from {self.coap_ip}')
+    logging.info(f'Listener: {self.coap_ip}:{self.coap_port}')
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     sock.bind(('', self.coap_port))
@@ -29,7 +29,7 @@ class ShellyProxy:
     sock.setsockopt(socket.IPPROTO_IP, socket.IP_ADD_MEMBERSHIP, mreq)
 
     # start loop
-    logging.info(f'Started ShellyForHASS Proxy and forwarding messages to {self.hass_ip}:{self.hass_port}')
+    logging.info(f'Forwarder: {self.hass_ip}:{self.hass_port}')
     while True:
       try:
         # Receive CoAP message
