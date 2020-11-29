@@ -16,6 +16,8 @@ If you are running your Shelly devices on different VLAN or running Home Assista
 | HASS_PORT | Port for shelly in your home assistant | 5684|
 | COAP_IP | Shelly CoAP multicast address | 224.0.1.187 |
 | COAP_PORT | Shelly CoAP multicast port | 5683 |
+| PROXY_DEBUG | Print debug logs | False |
+
 
 ## Start ShellyForHassProxy container:
 **Important to use --net host**

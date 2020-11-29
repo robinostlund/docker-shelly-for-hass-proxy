@@ -7,4 +7,5 @@ ADD src/ShellyForHassProxy.py /opt/proxy.py
 
 RUN chmod +x /opt/entrypoint.sh
 
-ENTRYPOINT ["/opt/entrypoint.sh"]
+#ENTRYPOINT ["/opt/entrypoint.sh"]
+ENTRYPOINT ["python3 /opt/proxy.py"]
